@@ -15,6 +15,7 @@ ADDRESS = Address(
 PRODUCT = Product(id=1, description='guitar', price=250)
 
 ITEM = Item(PRODUCT, 1)
+EXCESS_ITEM = Item(PRODUCT, 100)
 
 ORDER = Order(
     shipping_address=ADDRESS,
