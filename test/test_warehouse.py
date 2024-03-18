@@ -1,8 +1,8 @@
 import unittest
 from unittest import TestCase
 
-from src.product import Product
-from src.warehouse import Entry, Warehouse
+from src.warehouse import Warehouse
+from test.fixtures import ENTRY
 
 
 class WarehouseTest(TestCase):
@@ -11,7 +11,7 @@ class WarehouseTest(TestCase):
         self.assertEqual(warehouse.catalogue, [])
 
     def test_initialise_warehouse(self):
-        entry = Entry(Product(id=1, description='pen', price=2.5), stock=10)
+        entry = ENTRY
         warehouse = Warehouse(catalogue=[entry])
         self.assertEqual(warehouse.catalogue, [entry])
 
