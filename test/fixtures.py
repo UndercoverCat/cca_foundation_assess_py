@@ -12,17 +12,18 @@ ADDRESS = Address(
     Country.UNITED_KINGDOM
 )
 
-PRODUCT = Product(id=1, description='guitar', price=250)
+GUITAR = Product(id=1, description='guitar', price=250)
+PIANO = Product(id=2, description='piano', price=5000)
 
-ITEM = Item(PRODUCT, 1)
-EXCESS_ITEM = Item(PRODUCT, 100)
+ITEM = Item(GUITAR, 1)
+EXCESS_ITEM = Item(GUITAR, 100)
 
 ORDER = Order(
     shipping_address=ADDRESS,
     items=[]
 )
 
-ENTRY = Entry(PRODUCT, stock=10)
+ENTRY = Entry(GUITAR, stock=10)
 
 EMPTY_WAREHOUSE = Warehouse(catalogue=[])
 WAREHOUSE = Warehouse(catalogue=[ENTRY])
