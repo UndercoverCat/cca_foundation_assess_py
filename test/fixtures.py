@@ -1,7 +1,7 @@
 from src.address import Address
 from src.countries import Country
 from src.warehouse import Entry
-from src.order import Item
+from src.order import Item, Order
 from src.product import Product
 
 ADDRESS = Address(
@@ -15,5 +15,10 @@ ADDRESS = Address(
 PRODUCT = Product(id=1, description='guitar', price=250)
 
 ITEM = Item(PRODUCT, 1)
+
+ORDER = Order(
+    shipping_address=ADDRESS,
+    items=[]
+)
 
 ENTRY = Entry(PRODUCT, stock=10)
