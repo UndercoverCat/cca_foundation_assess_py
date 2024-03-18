@@ -5,7 +5,7 @@ from src.warehouse import Warehouse
 
 
 class WarehouseTest(TestCase):
-    def initialise_empty_warehouse(self):
+    def test_initialise_empty_warehouse(self):
         warehouse = Warehouse(catalogue=[])
         self.assertEqual(warehouse.catalogue, [])
 
