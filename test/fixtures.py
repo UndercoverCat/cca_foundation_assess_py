@@ -12,6 +12,9 @@ ADDRESS = Address(
     Country.UNITED_KINGDOM
 )
 
-ITEM = Item(Product(id=1, description='pen', price=2.5), quantity=1)
+PRODUCT = Product(id=1, description='pen', price=2.5)
 
-ENTRY = Entry(Product(id=1, description='pen', price=2.5), stock=10)
+ITEM = Item(PRODUCT, 1)
+
+ENTRY = Entry(PRODUCT, stock=10)
+
