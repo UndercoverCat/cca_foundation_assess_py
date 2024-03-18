@@ -15,7 +15,7 @@ class OrderTest(TestCase):
         )
         pen = Item(Product(id=1, description='pen', price=2.5), quantity=1)
         order.add_item(pen)
-        assert TestCase.assertEqual(self, order.items, [pen])
+        self.assertEqual(order.items, [pen])
 
 
 if __name__ == '__main__':
