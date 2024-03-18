@@ -11,9 +11,9 @@ class OrderTest(TestCase):
             shipping_address=ADDRESS,
             items=[]
         )
-        pen = ITEM
-        order.add_item(pen)
-        self.assertEqual(order.items, [pen])
+        guitar = ITEM
+        order.add_item(guitar)
+        self.assertEqual(order.items, [guitar])
 
 
 if __name__ == '__main__':
