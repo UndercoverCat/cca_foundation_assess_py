@@ -1,5 +1,6 @@
 from dataclasses import dataclass
-from product import Product
+
+from src.product import Product
 
 
 @dataclass
@@ -11,4 +12,3 @@ class Entry:
 @dataclass
 class Warehouse:
     catalogue: list[Entry]
-
