@@ -1,18 +1,17 @@
 import unittest
 from unittest import TestCase
 
-from src.warehouse import Warehouse
-from test.fixtures import ENTRY
+from test.fixtures import EMPTY_WAREHOUSE, ENTRY, WAREHOUSE
 
 
 class WarehouseTest(TestCase):
     def test_initialise_empty_warehouse(self):
-        warehouse = Warehouse(catalogue=[])
+        warehouse = EMPTY_WAREHOUSE
         self.assertEqual(warehouse.catalogue, [])
 
     def test_initialise_warehouse(self):
         entry = ENTRY
-        warehouse = Warehouse(catalogue=[entry])
+        warehouse = WAREHOUSE
         self.assertEqual(warehouse.catalogue, [entry])
 
 

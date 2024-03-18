@@ -1,6 +1,6 @@
 from src.address import Address
 from src.countries import Country
-from src.warehouse import Entry
+from src.warehouse import Entry, Warehouse
 from src.order import Item, Order
 from src.product import Product
 
@@ -22,3 +22,6 @@ ORDER = Order(
 )
 
 ENTRY = Entry(PRODUCT, stock=10)
+
+EMPTY_WAREHOUSE = Warehouse(catalogue=[])
+WAREHOUSE = Warehouse(catalogue=[ENTRY])
